@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>凛冬要塞 · SVG 场景插画系统预览</title>
+<style>
+  :root {
+    --bg-deep: #0D0D12; --text: #E8E0D5; --dim: #A09888; --gold: #C9A94E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg-deep); color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif; padding: 2rem 1.5rem 4rem;
+  }
+  header { text-align: center; margin-bottom: 2.5rem; }
+  header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: linear-gradient(180deg, #F5E3B3, var(--gold), #8B6914);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 0.06em;
+  }
+  header p { color: var(--dim); font-size: 0.875rem; margin: 0; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem; max-width: 1280px; margin: 0 auto;
+  }
+  .card {
+    background: linear-gradient(rgba(42,37,34,0.9), rgba(42,37,34,0.9)) padding-box,
+                linear-gradient(135deg, rgba(201,169,78,0.35), rgba(201,169,78,0.08) 40%, rgba(123,111,223,0.18) 80%, rgba(201,169,78,0.28)) border-box;
+    border: 1px solid transparent; border-radius: 12px; overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 4px 18px rgba(0,0,0,0.5);
+  }
+  .card canvas-wrap { display: block; }
+  .card svg { display: block; width: 100%; height: auto; }
+  .card .meta { padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; }
+  .card .name { font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; }
+  .card .name em { font-style: normal; font-size: 0.7rem; color: var(--dim); margin-left: 0.4rem; }
+  .card .badge {
+    font-size: 0.625rem; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px;
+    border: 1px solid currentColor; opacity: 0.8;
+  }
+  .note {
+    max-width: 1280px; margin: 2rem auto 0; color: var(--dim); font-size: 0.75rem; line-height: 1.8;
+    border-top: 1px solid rgba(201,169,78,0.15); padding-top: 1rem;
+  }
+  .note b { color: var(--gold); }
+  /* 粒子动画（与 globals.css fx-* 一致） */
+  .fx-particle { will-change: transform, opacity; }
+  @keyframes fx-drift-snow { 0%{transform:translate(0,-10px);opacity:0} 12%{opacity:1} 88%{opacity:1} 100%{transform:translate(16px,130px);opacity:0} }
+  .fx-drift-snow { animation: fx-drift-snow var(--dur,7s) linear infinite; animation-delay: var(--delay,0s); }
+  @keyframes fx-drift-ember { 0%{transform:translate(0,46px) scale(1);opacity:0} 18%{opacity:.9} 100%{transform:translate(-10px,-44px) scale(.35);opacity:0} }
+  .fx-drift-ember { animation: fx-drift-ember var(--dur,6s) ease-in infinite; animation-delay: var(--delay,0s); }
+  @keyframes fx-drift-firefly { 0%,100%{transform:translate(0,0);opacity:.12} 25%{transform:translate(12px,-9px);opacity:.95} 50%{transform:translate(-7px,-15px);opacity:.35} 75%{transform:translate(9px,5px);opacity:.8} }
+  .fx-drift-firefly { animation: fx-drift-firefly var(--dur,9s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+  @keyframes fx-star-twinkle { 0%,100%{opacity:.2} 50%{opacity:.95} }
+  .fx-star-twinkle { animation: fx-star-twinkle var(--dur,3.5s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+  @keyframes fx-drift-fog { 0%{transform:translateX(-24px);opacity:.15} 50%{opacity:.55} 100%{transform:translateX(24px);opacity:.15} }
+  .fx-drift-fog { animation: fx-drift-fog var(--dur,16s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+  @keyframes fx-drift-dust { 0%{transform:translateY(-12px);opacity:0} 30%{opacity:.45} 100%{transform:translateY(96px);opacity:0} }
+  .fx-drift-dust { animation: fx-drift-dust var(--dur,10s) linear infinite; animation-delay: var(--delay,0s); }
+</style>
+</head>
+<body>
+<header>
+  <h1>凛冬要塞 · Frosthold</h1>
+  <p>技术美术 — SVG 分层场景插画系统 · 10 场景程序化生成 · 零图片资产 · 零外部请求</p>
+</header>
+<div class="grid" id="grid"></div>
+<div class="note">
+  <b>分层结构（z 序）：</b>天空多段渐变 → 光晕（月/落日/火光/暗能量）→ 远层山脊剪影 → 近层剪影（松树/塔楼/断柱/石笋/钟乳石/草丛）→ 粒子（飘雪/火星/萤火/星点/雾气/岩尘，CSS 动画）→ 底部雾带。<br>
+  <b>技术要点：</b>单 SVG viewBox 0 0 400 120 + preserveAspectRatio 实现全尺寸响应式；粒子坐标固定种子伪随机（SSR/客户端 hydration 一致，不闪烁）；粒子动画走 CSS keyframes，可被系统「减少动效」全局灭活；色板全部来自 tokens.ts 单一事实源。
+</div>
+
+<script>
+// ===== 与 scene-art.ts 一致的算法复刻（预览用） =====
+const W = 400, H = 120;
+function ridgePath(peaks, baseY) {
+  const n = peaks.length;
+  const xs = n === 1 ? [W/2] : peaks.map((_, i) => (i/(n-1))*W);
+  let d = `M 0 ${baseY}`;
+  xs.forEach((x, i) => { d += ` L ${x.toFixed(1)} ${(baseY - peaks[i]).toFixed(1)}`; });
+  return d + ` L ${W} ${baseY} Z`;
+}
+function pinePath(x, size, baseY) {
+  const top = baseY - size, w = size * 0.58;
+  return [
+    `M ${x} ${top} L ${x+w/2} ${top+size*0.6} L ${x-w/2} ${top+size*0.6} Z`,
+    `M ${x-w*0.3} ${top+size*0.52} L ${x+w*0.3} ${top+size*0.52} L ${x+w*0.64} ${top+size*0.82} L ${x-w*0.64} ${top+size*0.82} Z`,
+    `M ${x-w*0.09} ${top+size*0.8} L ${x+w*0.09} ${top+size*0.8} L ${x+w*0.06} ${baseY} L ${x-w*0.06} ${baseY} Z`,
+  ].join(' ');
+}
+function towersPath(towers, baseY) {
+  let d = '';
+  for (const t of towers) {
+    const top = baseY - t.h;
+    d += `M ${t.x} ${baseY} L ${t.x} ${top}`;
+    d += ` L ${t.x+t.w*0.18} ${top} L ${t.x+t.w*0.18} ${top-4}`;
+    d += ` L ${t.x+t.w*0.42} ${top-4} L ${t.x+t.w*0.42} ${top}`;
+    d += ` L ${t.x+t.w*0.68} ${top} L ${t.x+t.w*0.68} ${top-4}`;
+    d += ` L ${t.x+t.w*0.86} ${top-4} L ${t.x+t.w*0.86} ${top}`;
+    d += ` L ${t.x+t.w} ${top} L ${t.x+t.w} ${baseY}`;
+  }
+  return d + ` L ${W} ${baseY} L 0 ${baseY} Z`;
+}
+function pillarPath(x, w, h, baseY) {
+  const top = baseY - h;
+  return `M ${x} ${baseY} L ${x} ${top}` +
+    ` L ${x+w*0.35} ${top} L ${x+w*0.45} ${top-5}` +
+    ` L ${x+w*0.6} ${top-2} L ${x+w*0.8} ${top+4}` +
+    ` L ${x+w} ${top+2} L ${x+w} ${baseY} Z`;
+}
+function spikePath(x, h, baseY) {
+  return `M ${x-4} ${baseY} L ${x} ${baseY-h} L ${x+4} ${baseY} Z`;
+}
+function stalactitePath(x, h) {
+  return `M ${x-4} 0 L ${x} ${h} L ${x+4} 0 Z`;
+}
+// 确定性伪随机（mulberry32）
+function seededRandom(seed) {
+  let a = seed >>> 0;
+  return () => {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const PARTICLE_COLORS = { snow:'#C8D6E8', ember:'#E07030', firefly:'#9ACD7A', fog:'#7A6A9A', star:'#D8D8E8', dust:'#8A7A6A' };
+const PARTICLE_CLASS = { snow:'fx-drift-snow', ember:'fx-drift-ember', firefly:'fx-drift-firefly', star:'fx-star-twinkle', fog:'fx-drift-fog', dust:'fx-drift-dust' };
+
+// ===== 10 场景配置（与 scene-art.ts SCENE_ART 一致） =====
+const SCENES = [
+  { key:'forest', label:'密林', sky:['#07170E','#0E2417','#1B3323'], glow:{cx:320,cy:22,r:26,color:'#4A7C3F',opacity:0.32}, ridges:[{peaks:[18,30,14,26,10],baseY:86,color:'#15301F'}], trees:[{x:34,size:26,color:'#0B2313'},{x:82,size:18,color:'#0E2A17'},{x:128,size:30,color:'#0B2313'},{x:196,size:22,color:'#102E1A'},{x:246,size:28,color:'#0B2313'},{x:308,size:20,color:'#0E2A17'},{x:360,size:26,color:'#0B2313'}], particles:[{kind:'firefly',count:8,opacity:0.75}], fog:'#07170E', accent:'#4A7C3F' },
+  { key:'cave', label:'洞穴', sky:['#050506','#0E0C0A','#171310'], glow:{cx:200,cy:62,r:30,color:'#5E4E3E',opacity:0.3}, stalactites:[{x:30,h:22,color:'#0A0808'},{x:96,h:34,color:'#0D0A0A'},{x:150,h:18,color:'#0A0808'},{x:224,h:38,color:'#0D0A0A'},{x:288,h:24,color:'#0A0808'},{x:356,h:30,color:'#0D0A0A'}], spikes:[{x:60,h:16,color:'#0B0908'},{x:170,h:24,color:'#0E0B0A'},{x:260,h:14,color:'#0B0908'},{x:330,h:20,color:'#0E0B0A'}], particles:[{kind:'dust',count:12,opacity:0.4}], fog:'#050506', accent:'#5E4E3E' },
+  { key:'snow', label:'雪原', sky:['#0A1526','#14243A','#21344C'], glow:{cx:88,cy:26,r:20,color:'#8AACE0',opacity:0.55}, ridges:[{peaks:[20,32,26,40,22,34,16],baseY:94,color:'#1B2C42'},{peaks:[10,18,12,22],baseY:72,color:'#243A54',opacity:0.6}], trees:[{x:60,size:24,color:'#16283E'},{x:150,size:30,color:'#182C46'},{x:250,size:20,color:'#16283E'},{x:342,size:26,color:'#182C46'}], particles:[{kind:'snow',count:16,opacity:0.9}], fog:'#0A1526', accent:'#8AACE0' },
+  { key:'fire', label:'熔火', sky:['#1A0803','#2B1105','#3D1A08'], glow:{cx:200,cy:66,r:42,color:'#E07030',opacity:0.55}, ridges:[{peaks:[12,8,16,6,10],baseY:92,color:'#200B03'}], spikes:[{x:30,h:26,color:'#180803'},{x:96,h:34,color:'#1E0B04'},{x:168,h:22,color:'#180803'},{x:236,h:30,color:'#1E0B04'},{x:306,h:24,color:'#180803'},{x:372,h:30,color:'#1E0B04'}], particles:[{kind:'ember',count:14,opacity:0.9}], fog:'#1A0803', accent:'#E07030' },
+  { key:'castle', label:'城堡', sky:['#08081C','#10102E','#181838'], glow:{cx:312,cy:28,r:16,color:'#E0CC85',opacity:0.5}, towers:[{x:34,w:84,h:50,color:'#12122C'},{x:118,w:118,h:38,color:'#151532'},{x:236,w:66,h:54,color:'#12122C'},{x:302,w:98,h:34,color:'#151532'}], particles:[{kind:'star',count:14,opacity:0.85}], fog:'#08081C', accent:'#C9A94E' },
+  { key:'shadow', label:'暗影', sky:['#090314','#120628','#1A0A32'], glow:{cx:200,cy:48,r:34,color:'#7A3A8A',opacity:0.35}, ridges:[{peaks:[16,26,12,30,18,24,10],baseY:92,color:'#160830'}], pillars:[{x:56,w:18,h:40,color:'#100525'},{x:140,w:26,h:30,color:'#14072C'},{x:252,w:20,h:44,color:'#100525'},{x:336,w:24,h:26,color:'#14072C'}], particles:[{kind:'fog',count:7,opacity:0.5}], fog:'#090314', accent:'#7A3A8A' },
+  { key:'mountain', label:'山脉', sky:['#0C1322','#182238','#26304C'], glow:{cx:200,cy:40,r:36,color:'#8A8AAE',opacity:0.35}, ridges:[{peaks:[34,46,38,52,30,20],baseY:100,color:'#1A2440'},{peaks:[12,20,10,16],baseY:78,color:'#24304C',opacity:0.55}], particles:[{kind:'star',count:8,opacity:0.7}], fog:'#0C1322', accent:'#6A6A8A' },
+  { key:'plains', label:'平原', sky:['#241A08','#33270E','#3D3016'], glow:{cx:324,cy:16,r:22,color:'#C8A44E',opacity:0.5}, ridges:[{peaks:[8,12,6,14,8],baseY:90,color:'#2A200A'}], spikes:[{x:40,h:9,color:'#241C08'},{x:76,h:6,color:'#2A200A'},{x:118,h:10,color:'#241C08'},{x:176,h:7,color:'#2A200A'},{x:224,h:10,color:'#241C08'},{x:282,h:6,color:'#2A200A'},{x:336,h:9,color:'#241C08'},{x:372,h:6,color:'#2A200A'}], particles:[{kind:'fog',count:5,opacity:0.35}], fog:'#241A08', accent:'#8A8A5E' },
+  { key:'ruin', label:'废墟', sky:['#1C0906','#2B1008','#341A0E'], glow:{cx:158,cy:62,r:30,color:'#AA6A4A',opacity:0.4}, ridges:[{peaks:[10,16,8,14,6],baseY:88,color:'#1F0B06'}], pillars:[{x:64,w:20,h:46,color:'#1C0A06'},{x:118,w:14,h:30,color:'#220D08'},{x:246,w:22,h:40,color:'#1C0A06'},{x:304,w:16,h:52,color:'#220D08'}], particles:[{kind:'ember',count:9,opacity:0.7}], fog:'#1C0906', accent:'#AA6A4A' },
+  { key:'default', label:'凛冬要塞', sky:['#0B0B16','#13131F','#1A1A2A'], glow:{cx:330,cy:68,r:38,color:'#C9A94E',opacity:0.25}, ridges:[{peaks:[10,16,8,20,12],baseY:96,color:'#161624'}], particles:[{kind:'star',count:12,opacity:0.8}], fog:'#0B0B16', accent:'#C9A94E' },
+];
+
+function renderScene(art, idx) {
+  const uid = `s${idx}`;
+  let svg = `<svg viewBox="0 0 400 120" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<defs>`;
+  svg += `<linearGradient id="${uid}-sky" x1="0" y1="0" x2="0" y2="1">`;
+  art.sky.forEach((c, i) => { svg += `<stop offset="${(i/(art.sky.length-1))*100}%" stop-color="${c}"/>`; });
+  svg += `</linearGradient>`;
+  if (art.glow) {
+    svg += `<radialGradient id="${uid}-glow">`;
+    svg += `<stop offset="0%" stop-color="${art.glow.color}" stop-opacity="${art.glow.opacity ?? 0.5}"/>`;
+    svg += `<stop offset="100%" stop-color="${art.glow.color}" stop-opacity="0"/>`;
+    svg += `</radialGradient>`;
+  }
+  svg += `<linearGradient id="${uid}-fog" x1="0" y1="1" x2="0" y2="0">`;
+  svg += `<stop offset="0%" stop-color="${art.fog}" stop-opacity="0.85"/>`;
+  svg += `<stop offset="100%" stop-color="${art.fog}" stop-opacity="0"/>`;
+  svg += `</linearGradient></defs>`;
+  svg += `<rect x="0" y="0" width="400" height="120" fill="url(#${uid}-sky)"/>`;
+  if (art.glow) svg += `<circle cx="${art.glow.cx}" cy="${art.glow.cy}" r="${art.glow.r}" fill="url(#${uid}-glow)"/>`;
+  (art.ridges || []).forEach(r => { svg += `<path d="${ridgePath(r.peaks, r.baseY)}" fill="${r.color}" opacity="${r.opacity ?? 1}"/>`; });
+  (art.trees || []).forEach(t => { svg += `<path d="${pinePath(t.x, t.size, H)}" fill="${t.color}"/>`; });
+  if (art.towers && art.towers.length) { svg += `<path d="${towersPath(art.towers.map(t=>({x:t.x,w:t.w,h:t.h})), H)}" fill="${art.towers[0].color}"/>`; }
+  (art.pillars || []).forEach(p => { svg += `<path d="${pillarPath(p.x, p.w, p.h, H)}" fill="${p.color}"/>`; });
+  (art.spikes || []).forEach(s => { svg += `<path d="${spikePath(s.x, s.h, H)}" fill="${s.color}"/>`; });
+  (art.stalactites || []).forEach(s => { svg += `<path d="${stalactitePath(s.x, s.h)}" fill="${s.color}"/>`; });
+  art.particles.forEach((spec, gi) => {
+    const rand = seededRandom(gi * 131 + art.key.length * 7);
+    for (let i = 0; i < spec.count; i++) {
+      const x = rand() * 400, y = rand() * 120;
+      const r = (spec.kind === 'fog' || spec.kind === 'dust') ? (0.5 + rand() * 1.6) * 3 : 0.5 + rand() * 1.6;
+      const delay = rand() * 6, dur = 4 + rand() * 8;
+      svg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${PARTICLE_COLORS[spec.kind]}" class="fx-particle ${PARTICLE_CLASS[spec.kind]}" style="--delay:${delay}s;--dur:${dur}s" opacity="${spec.opacity}"/>`;
+    }
+  });
+  svg += `<rect x="0" y="${H*0.65}" width="400" height="${H*0.35}" fill="url(#${uid}-fog)"/>`;
+  svg += `</svg>`;
+  return svg;
+}
+
+const grid = document.getElementById('grid');
+SCENES.forEach((art, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `<div class="canvas-wrap">${renderScene(art, i)}</div>` +
+    `<div class="meta"><span class="name">${art.label}<em>${art.key}</em></span>` +
+    `<span class="badge" style="color:${art.accent}">${art.particles.map(p=>p.kind).join(' · ')}</span></div>`;
+  grid.appendChild(card);
+});
+</script>
+</body>
+</html>
