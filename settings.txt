@@ -1,0 +1,71 @@
+1:"$Sreact.fragment"
+3:I[9766,[],""]
+4:I[960,["619","static/chunks/619-ba102abea3e3d0e4.js","39","static/chunks/app/error-6f53b651867970cf.js"],"default"]
+5:I[8924,[],""]
+6:I[1959,[],"ClientPageRoot"]
+7:I[3203,["80","static/chunks/80-a9a4d6a0d02d3666.js","662","static/chunks/app/settings/page-6daf20cf8a43e8f1.js"],"default"]
+a:I[4431,[],"OutletBoundary"]
+c:I[5278,[],"AsyncMetadataOutlet"]
+e:I[4431,[],"ViewportBoundary"]
+10:I[4431,[],"MetadataBoundary"]
+11:"$Sreact.suspense"
+13:I[4062,["219","static/chunks/app/global-error-ca4832eb3878d512.js"],"default"]
+:HL["/watchparty/_next/static/css/5a189f48435463d8.css","style"]
+2:T5ad,:root{--c-gold: #C9A94E;
+--c-gold-light: #E0CC85;
+--c-gold-dark: #A07820;
+--c-bg-deep: #0D0D12;
+--c-bg-panel: #1E1B18;
+--c-bg-card: #2A2522;
+--c-bg-hover: rgba(201,169,78,0.08);
+--c-text: #E8E0D5;
+--c-text-dim: #A09888;
+--c-text-muted: #6B635B;
+--c-danger: #C85554;
+--c-danger-bg: rgba(200,85,84,0.12);
+--c-ok: #5A9E6F;
+--c-ok-bg: rgba(90,158,111,0.12);
+--c-magic: #7B6FDF;
+--c-magic-bg: rgba(123,111,223,0.12);
+--c-info: #5B8CBE;
+--c-rarity-common: #A09888;
+--c-rarity-uncommon: #5A9E6F;
+--c-rarity-rare: #4A90D9;
+--c-rarity-epic: #A864C0;
+--c-rarity-legendary: #E8A840;
+--c-danger-level-safe: #5A9E6F;
+--c-danger-level-caution: #C8A44E;
+--c-danger-level-danger: #E07040;
+--c-danger-level-deadly: #C85554;
+--c-dark-accent: #E53E3E;
+--c-dark-bg: rgba(229,62,62,0.08);
+--c-currency-gold: #C9A94E;
+--c-currency-silver: #B0B8C8;
+--c-currency-copper: #C8966C;
+--c-currency-shard: #A864C0;
+--c-border: rgba(201,169,78,0.15);
+--c-border-active: rgba(201,169,78,0.4);
+--c-border-danger: rgba(200,85,84,0.3);
+--shadow-glow: 0 0 12px rgba(201,169,78,0.25);
+--shadow-glow-magic: 0 0 14px rgba(123,111,223,0.3);
+--shadow-card: 0 2px 8px rgba(0,0,0,0.35);
+--shadow-modal: 0 4px 24px rgba(0,0,0,0.5);
+--radius-sm: 6px;
+--radius-md: 10px;
+--radius-lg: 14px;
+--radius-pill: 24px;
+--font-xs: 0.6875rem;
+--font-sm: 0.75rem;
+--font-base: 0.875rem;
+--font-md: 0.9375rem;
+--font-lg: 1.0625rem;
+--font-xl: 1.25rem;
+--font-h3: 1rem;
+--font-h2: 1.125rem;
+--font-h1: 1.375rem;}0:{"P":null,"b":"obWOt103fyBB0wZQ-qEjM","p":"/watchparty","c":["","settings"],"i":false,"f":[[["",{"children":["settings",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/watchparty/_next/static/css/5a189f48435463d8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"className":"antialiased","children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":["settings",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L6",null,{"Component":"$7","searchParams":{},"params":{},"promises":["$@8","$@9"]}],null,["$","$La",null,{"children":["$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Le",null,{"children":"$Lf"}],null],["$","$L10",null,{"children":["$","div",null,{"hidden":true,"children":["$","$11",null,{"fallback":null,"children":"$L12"}]}]}]]}],false]],"m":"$undefined","G":["$13",[]],"s":false,"S":true}
+8:{}
+9:"$0:f:0:1:2:children:2:children:1:props:children:0:props:params"
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+d:{"metadata":[["$","title","0",{"children":"AI Narrator Game"}],["$","meta","1",{"name":"description","content":"AI GM 驱动的 2.5D 文字冒险游戏 — 你的故事，由 AI 讲述"}],["$","meta","2",{"name":"Content-Security-Policy","content":"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.deepseek.com https://openrouter.ai; media-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}]],"error":null,"digest":"$undefined"}
+12:"$d:metadata"
