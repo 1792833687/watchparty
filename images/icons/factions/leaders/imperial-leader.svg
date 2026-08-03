@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#F5F0E8"/>
+  <circle cx="128" cy="118" r="74" fill="none" stroke="#D4A843" stroke-width="3"/>
+  <circle cx="128" cy="118" r="62" fill="#FDF6F0" stroke="#8B5E3C" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="128" y="142" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="54" font-weight="700" fill="#8B6F47">朝</text>
+  <text x="128" y="230" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="18" fill="#8B6F47" letter-spacing="4">朝廷派系</text>
+</svg>

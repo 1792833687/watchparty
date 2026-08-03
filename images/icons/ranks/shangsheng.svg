@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8C66A" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#E8C66A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#FFF6E0" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#E8C66A" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#E8C66A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#FDF6F0"/>
+  <circle cx="128" cy="118" r="96" fill="url(#glow)"/>
+  <!-- 印身 -->
+  <rect x="44" y="40" width="168" height="176" rx="18" fill="url(#m)" stroke="#FFF6E0" stroke-width="4"/>
+  <rect x="56" y="52" width="144" height="152" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- 顶部铭文（印钮铭） -->
+  <text x="128" y="82" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="20" fill="#FFFFFF" fill-opacity="0.9" letter-spacing="10">商</text>
+  <!-- 中央印文 -->
+  <text x="128" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="92" font-weight="700" fill="#FFFFFF" letter-spacing="4">圣</text>
+  <!-- 底部年款 -->
+  <text x="128" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#FFFFFF" fill-opacity="0.6" letter-spacing="6">唐 · 商阶</text>
+</svg>

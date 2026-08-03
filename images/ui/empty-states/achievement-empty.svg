@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <!-- 空状态：成就空（未刻印章石 + 刻刀，待雕琢） -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF6F0"/><stop offset="1" stop-color="#EFE3CF"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <!-- 桌面 -->
+  <rect x="60" y="250" width="360" height="10" rx="4" fill="#8B6F47" opacity="0.65"/>
+  <!-- 素面印章石（未刻） -->
+  <rect x="150" y="130" width="130" height="112" rx="12" fill="#D8CBB8" stroke="#8B6F47" stroke-width="2.5"/>
+  <rect x="162" y="142" width="106" height="88" rx="8" fill="none" stroke="#8B5E3C" stroke-opacity="0.45" stroke-width="1.5"/>
+  <!-- 石顶刻面留白（中央"待刻"虚影） -->
+  <text x="215" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="34" fill="#8B6F47" fill-opacity="0.4" letter-spacing="2">待刻</text>
+  <!-- 侧旁刻刀 -->
+  <line x1="330" y1="140" x2="360" y2="238" stroke="#6B5636" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 328 138 L 338 132 L 364 232 L 356 240 Z" fill="#AEB6BF" stroke="#6B5636" stroke-width="1.5"/>
+  <!-- 木柄 -->
+  <path d="M 336 132 L 330 108 L 344 104 L 350 128 Z" fill="#8B6F47" stroke="#6B5636" stroke-width="1.5"/>
+  <!-- 石屑微尘 -->
+  <circle cx="150" cy="246" r="1.5" fill="#D8CBB8"/><circle cx="170" cy="250" r="1" fill="#D8CBB8"/><circle cx="132" cy="244" r="1.2" fill="#D8CBB8"/>
+  <!-- 底部文案 -->
+  <text x="240" y="300" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="18" fill="#8B6F47" letter-spacing="6">功业未就 · 印石待刻</text>
+  <text x="240" y="330" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#8B5E3C" fill-opacity="0.7" letter-spacing="3">尚未解锁任何成就</text>
+</svg>

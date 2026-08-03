@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <!-- 空状态：留言簿空（合上的嘉宾录 + 丝带书签） -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF6F0"/><stop offset="1" stop-color="#EFE3CF"/>
+    </linearGradient>
+    <linearGradient id="cover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A7C59"/><stop offset="1" stop-color="#3C6549"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <!-- 桌面 -->
+  <rect x="70" y="252" width="340" height="10" rx="4" fill="#8B6F47" opacity="0.65"/>
+  <!-- 合上的嘉宾录（丝缎封面） -->
+  <rect x="140" y="110" width="200" height="136" rx="8" fill="url(#cover)" stroke="#2F5138" stroke-width="2"/>
+  <rect x="152" y="122" width="176" height="112" rx="5" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5"/>
+  <!-- 封面标题：嘉宾录 -->
+  <text x="240" y="172" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="34" font-weight="700" fill="#FFF6E0" letter-spacing="10">嘉宾录</text>
+  <text x="240" y="202" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#FFFFFF" fill-opacity="0.7" letter-spacing="6">宾客留言簿</text>
+  <!-- 丝带书签 -->
+  <path d="M 300 110 L 300 246 C 294 236 286 236 282 246 L 282 110 Z" fill="#C0392B" opacity="0.9"/>
+  <path d="M 300 110 L 300 160 L 291 151 Z" fill="#C0392B" opacity="0.75"/>
+  <!-- 丝带结 -->
+  <path d="M 282 110 C 262 100 262 84 282 92 C 300 84 300 100 300 110 Z" fill="#C0392B"/>
+  <!-- 底部文案 -->
+  <text x="240" y="300" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="18" fill="#8B6F47" letter-spacing="6">嘉宾未至 · 簿卷犹新</text>
+  <text x="240" y="330" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#8B5E3C" fill-opacity="0.7" letter-spacing="3">还没有客人留言</text>
+</svg>

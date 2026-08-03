@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="640" viewBox="0 0 480 640">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FDF6F0"/><stop offset="1" stop-color="#EDE0CC"/>
+  </linearGradient></defs>
+  <rect width="480" height="640" fill="url(#g)"/>
+  <rect x="20" y="20" width="440" height="600" fill="none" stroke="#D4A843" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="240" cy="230" r="34" fill="#2C2C2C" fill-opacity="0.12"/>
+  <path d="M240 280 C 196 280 178 350 178 430 L 302 430 C 302 350 284 280 240 280 Z" fill="#4A7C59" fill-opacity="0.18" stroke="#4A7C59" stroke-width="2.5"/>
+  <text x="240" y="500" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="34" font-weight="700" fill="#2C2C2C" letter-spacing="6">苏大娘</text>
+  <text x="240" y="545" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="17" fill="#8B6F47" letter-spacing="4">平康坊酒肆老板娘</text>
+  <text x="240" y="590" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#8B5E3C" fill-opacity="0.7" letter-spacing="3">立绘占位 · 待替换</text>
+</svg>

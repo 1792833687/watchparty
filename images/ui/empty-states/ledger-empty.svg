@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <!-- 空状态：账本空（空账本 + 笔墨 + 午后尘埃） -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF6F0"/><stop offset="1" stop-color="#EFE3CF"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4A843" stop-opacity="0.14"/><stop offset="1" stop-color="#D4A843" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <!-- 午后斜光 -->
+  <polygon points="60,0 200,0 380,360 180,360" fill="url(#light)"/>
+  <!-- 尘埃光点 -->
+  <circle cx="150" cy="80" r="2" fill="#D4A843" opacity="0.5"/><circle cx="210" cy="120" r="1.5" fill="#D4A843" opacity="0.4"/>
+  <circle cx="120" cy="140" r="1.8" fill="#D4A843" opacity="0.45"/><circle cx="240" cy="70" r="1.3" fill="#D4A843" opacity="0.35"/>
+  <!-- 桌面 -->
+  <rect x="40" y="240" width="400" height="12" rx="5" fill="#8B6F47" opacity="0.7"/>
+  <!-- 摊开的空账本 -->
+  <path d="M 130 100 L 350 100 L 350 232 L 130 232 Z" fill="#FDF6F0" stroke="#8B5E3C" stroke-width="2.5"/>
+  <path d="M 130 100 L 240 100 L 240 232 L 130 232 Z" fill="#FAF3E7" stroke="#8B5E3C" stroke-width="1.5"/>
+  <line x1="240" y1="100" x2="240" y2="232" stroke="#8B5E3C" stroke-width="2"/>
+  <!-- 空白账页横线（空无记录） -->
+  <g stroke="#8B5E3C" stroke-opacity="0.3" stroke-width="1">
+    <line x1="150" y1="130" x2="220" y2="130"/><line x1="150" y1="148" x2="220" y2="148"/>
+    <line x1="150" y1="166" x2="220" y2="166"/><line x1="258" y1="130" x2="330" y2="130"/>
+    <line x1="258" y1="148" x2="330" y2="148"/><line x1="258" y1="166" x2="330" y2="166"/>
+  </g>
+  <!-- 毛笔 -->
+  <line x1="380" y1="120" x2="420" y2="226" stroke="#2C2C2C" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 416 220 C 420 230 418 240 414 244 C 410 240 408 230 412 222 Z" fill="#2C2C2C"/>
+  <!-- 砚台 -->
+  <ellipse cx="420" cy="248" rx="26" ry="9" fill="#2C2C2C" opacity="0.85"/>
+  <ellipse cx="420" cy="244" rx="16" ry="4.5" fill="#1A1A1A"/>
+  <!-- 底部文案 -->
+  <text x="240" y="300" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="18" fill="#8B6F47" letter-spacing="6">账本空空 · 尚未开张</text>
+  <text x="240" y="330" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#8B5E3C" fill-opacity="0.7" letter-spacing="3">今日尚无进账记录</text>
+</svg>

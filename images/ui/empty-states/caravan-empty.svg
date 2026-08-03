@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <!-- 空状态：镖队空（空马车 + 秋叶，静候出镖） -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF6F0"/><stop offset="1" stop-color="#EFE3CF"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <!-- 地面线 -->
+  <line x1="40" y1="286" x2="440" y2="286" stroke="#8B6F47" stroke-opacity="0.4" stroke-width="1.5"/>
+  <!-- 空马车 -->
+  <path d="M 120 180 L 300 180 L 290 232 L 130 232 Z" fill="#8B6F47" stroke="#6B5636" stroke-width="2.5"/>
+  <rect x="132" y="186" width="156" height="12" rx="3" fill="#6B5636"/>
+  <!-- 车辕落在地面 -->
+  <line x1="120" y1="232" x2="70" y2="278" stroke="#6B5636" stroke-width="5" stroke-linecap="round"/>
+  <line x1="300" y1="232" x2="350" y2="278" stroke="#6B5636" stroke-width="5" stroke-linecap="round"/>
+  <!-- 车轮 -->
+  <circle cx="170" cy="252" r="26" fill="none" stroke="#6B5636" stroke-width="4"/>
+  <circle cx="170" cy="252" r="6" fill="#6B5636"/>
+  <line x1="144" y1="252" x2="196" y2="252" stroke="#6B5636" stroke-width="2.5"/>
+  <line x1="170" y1="226" x2="170" y2="278" stroke="#6B5636" stroke-width="2.5"/>
+  <circle cx="252" cy="252" r="26" fill="none" stroke="#6B5636" stroke-width="4"/>
+  <circle cx="252" cy="252" r="6" fill="#6B5636"/>
+  <line x1="226" y1="252" x2="278" y2="252" stroke="#6B5636" stroke-width="2.5"/>
+  <line x1="252" y1="226" x2="252" y2="278" stroke="#6B5636" stroke-width="2.5"/>
+  <!-- 镖旗（空置） -->
+  <line x1="120" y1="150" x2="120" y2="182" stroke="#6B5636" stroke-width="3"/>
+  <path d="M 120 150 L 148 156 L 120 164 Z" fill="#C0392B"/>
+  <!-- 轮下秋叶 -->
+  <ellipse cx="140" cy="282" rx="8" ry="4" fill="#D4A843" opacity="0.75" transform="rotate(-18 140 282)"/>
+  <ellipse cx="288" cy="284" rx="7" ry="3.5" fill="#C0392B" opacity="0.6" transform="rotate(24 288 284)"/>
+  <ellipse cx="120" cy="278" rx="6" ry="3" fill="#B98A2E" opacity="0.6" transform="rotate(-40 120 278)"/>
+  <!-- 底部文案 -->
+  <text x="240" y="320" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="18" fill="#8B6F47" letter-spacing="6">车辕落尘 · 静候出镖</text>
+  <text x="240" y="348" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#8B5E3C" fill-opacity="0.7" letter-spacing="3">还没有在押的镖队</text>
+</svg>
