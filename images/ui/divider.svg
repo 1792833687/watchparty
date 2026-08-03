@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="28" viewBox="0 0 400 28">
+  <!-- 分割线：手绘感水平线 + 中央云纹（描金） -->
+  <defs>
+    <linearGradient id="lineG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D4A843" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#D4A843"/>
+      <stop offset="1" stop-color="#D4A843" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- 左右手绘线（轻微波浪） -->
+  <path d="M 8 14 Q 60 12 118 14 T 190 14" fill="none" stroke="url(#lineG)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 210 14 Q 282 12 340 14 T 392 14" fill="none" stroke="url(#lineG)" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- 端点圆点 -->
+  <circle cx="12" cy="14" r="2" fill="#D4A843" fill-opacity="0.7"/>
+  <circle cx="388" cy="14" r="2" fill="#D4A843" fill-opacity="0.7"/>
+  <!-- 中央如意云纹 -->
+  <g fill="none" stroke="#D4A843" stroke-width="2" stroke-linecap="round">
+    <path d="M 200 5 C 190 8 184 14 188 21 C 192 26 198 26 200 23 C 202 26 208 26 212 21 C 216 14 210 8 200 5 Z"/>
+    <path d="M 200 9 C 196 12 194 15 195 18 C 197 20 200 20 200 18 C 200 20 203 20 205 18 C 206 15 204 12 200 9 Z"/>
+  </g>
+  <!-- 云头流线 -->
+  <path d="M 168 14 C 176 11 184 11 188 14" fill="none" stroke="#D4A843" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M 232 14 C 224 11 216 11 212 14" fill="none" stroke="#D4A843" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>
+</svg>

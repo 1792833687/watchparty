@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <!-- 面板边框（9-slice）：描金边框 + 四角如意纹，中间透明
+       用法：border-image: url(/images/ui/panel-border.svg) 60 fill / 60px round -->
+  <defs>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B98A2E"/>
+      <stop offset="0.5" stop-color="#E8C66A"/>
+      <stop offset="1" stop-color="#B98A2E"/>
+    </linearGradient>
+  </defs>
+  <!-- 四边金线（9-slice 边缘区，60px 内） -->
+  <line x1="60" y1="6" x2="180" y2="6" stroke="url(#goldLine)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="60" y1="234" x2="180" y2="234" stroke="url(#goldLine)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="6" y1="60" x2="6" y2="180" stroke="url(#goldLine)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="234" y1="60" x2="234" y2="180" stroke="url(#goldLine)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 内侧细檀木线 -->
+  <line x1="60" y1="14" x2="180" y2="14" stroke="#8B5E3C" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="60" y1="226" x2="180" y2="226" stroke="#8B5E3C" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="14" y1="60" x2="14" y2="180" stroke="#8B5E3C" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="226" y1="60" x2="226" y2="180" stroke="#8B5E3C" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- 左上如意纹 -->
+  <g stroke="#D4A843" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M 28 8 C 14 10 6 22 8 34 C 10 44 18 50 28 48"/>
+    <path d="M 8 28 C 8 20 10 12 16 8"/>
+    <path d="M 20 22 C 26 18 30 12 30 6"/>
+  </g>
+  <!-- 右上如意纹（镜像） -->
+  <g stroke="#D4A843" stroke-width="2.2" fill="none" stroke-linecap="round" transform="translate(240,0) scale(-1,1)">
+    <path d="M 28 8 C 14 10 6 22 8 34 C 10 44 18 50 28 48"/>
+    <path d="M 8 28 C 8 20 10 12 16 8"/>
+    <path d="M 20 22 C 26 18 30 12 30 6"/>
+  </g>
+  <!-- 左下如意纹（镜像 Y） -->
+  <g stroke="#D4A843" stroke-width="2.2" fill="none" stroke-linecap="round" transform="translate(0,240) scale(1,-1)">
+    <path d="M 28 8 C 14 10 6 22 8 34 C 10 44 18 50 28 48"/>
+    <path d="M 8 28 C 8 20 10 12 16 8"/>
+    <path d="M 20 22 C 26 18 30 12 30 6"/>
+  </g>
+  <!-- 右下如意纹（镜像 XY） -->
+  <g stroke="#D4A843" stroke-width="2.2" fill="none" stroke-linecap="round" transform="translate(240,240) scale(-1,-1)">
+    <path d="M 28 8 C 14 10 6 22 8 34 C 10 44 18 50 28 48"/>
+    <path d="M 8 28 C 8 20 10 12 16 8"/>
+    <path d="M 20 22 C 26 18 30 12 30 6"/>
+  </g>
+  <!-- 四角描金小点 -->
+  <circle cx="30" cy="30" r="3.5" fill="#D4A843" fill-opacity="0.85"/>
+  <circle cx="210" cy="30" r="3.5" fill="#D4A843" fill-opacity="0.85"/>
+  <circle cx="30" cy="210" r="3.5" fill="#D4A843" fill-opacity="0.85"/>
+  <circle cx="210" cy="210" r="3.5" fill="#D4A843" fill-opacity="0.85"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 资金：方孔铜钱（描金 + 平涂） -->
+  <circle cx="64" cy="64" r="50" fill="#D4A843" fill-opacity="0.14"/>
+  <circle cx="64" cy="64" r="50" fill="none" stroke="#D4A843" stroke-width="4"/>
+  <circle cx="64" cy="64" r="42" fill="none" stroke="#D4A843" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- 内方孔 -->
+  <rect x="48" y="48" width="32" height="32" fill="#F5F0E8" stroke="#D4A843" stroke-width="3.5" stroke-linejoin="miter"/>
+  <!-- 四字位点饰（钱文惯例） -->
+  <circle cx="64" cy="26" r="2.6" fill="#D4A843"/>
+  <circle cx="64" cy="102" r="2.6" fill="#D4A843"/>
+  <circle cx="26" cy="64" r="2.6" fill="#D4A843"/>
+  <circle cx="102" cy="64" r="2.6" fill="#D4A843"/>
+</svg>

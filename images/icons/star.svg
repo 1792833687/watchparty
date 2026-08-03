@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 评分：五瓣梅花（唐风，褪色描金） -->
+  <g fill="#D4A843" fill-opacity="0.88">
+    <!-- 五瓣：绕中心旋转 -->
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(0 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(72 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(144 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(216 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(288 64 64)"/>
+  </g>
+  <!-- 花蕊 -->
+  <circle cx="64" cy="64" r="9" fill="#F5F0E8" stroke="#B98A2E" stroke-width="2.5"/>
+  <circle cx="64" cy="64" r="3.5" fill="#B98A2E"/>
+  <!-- 花瓣细描线（水墨勾边） -->
+  <g fill="none" stroke="#B98A2E" stroke-width="1.6" stroke-opacity="0.6">
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(0 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(72 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(144 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(216 64 64)"/>
+    <ellipse cx="64" cy="40" rx="13" ry="20" transform="rotate(288 64 64)"/>
+  </g>
+</svg>

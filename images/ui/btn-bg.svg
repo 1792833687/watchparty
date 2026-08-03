@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <!-- 按钮背景纹理：竹青渐变 + 细微丝绸纹理（可 9-slice / 平铺拉伸） -->
+  <defs>
+    <linearGradient id="btnG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#55895F"/>
+      <stop offset="0.45" stop-color="#4A7C59"/>
+      <stop offset="1" stop-color="#3C6549"/>
+    </linearGradient>
+    <!-- 丝绸斜纹 -->
+    <pattern id="silk" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="2"/>
+      <line x1="7" y1="0" x2="7" y2="14" stroke="#000000" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <!-- 顶部高光 -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="60" fill="url(#btnG)"/>
+  <rect width="200" height="60" fill="url(#silk)"/>
+  <rect width="200" height="26" fill="url(#gloss)"/>
+  <!-- 底部描金细线 -->
+  <line x1="0" y1="58.5" x2="200" y2="58.5" stroke="#D4A843" stroke-opacity="0.5" stroke-width="1.5"/>
+</svg>

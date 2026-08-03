@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="800" viewBox="0 0 200 800">
+  <!-- 导航栏背景纹理：暖米色底 + 浅淡唐草纹（纵向无缝重复） -->
+  <defs>
+    <linearGradient id="navBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FDF6F0"/>
+      <stop offset="1" stop-color="#F4EADC"/>
+    </linearGradient>
+    <!-- 唐草纹单元：S 形卷草 + 叶芽，金色低透明度 -->
+    <pattern id="grass" width="120" height="120" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#D4A843" stroke-opacity="0.14" stroke-width="1.6" stroke-linecap="round">
+        <!-- 主藤蔓 -->
+        <path d="M-10 110 C 30 80 30 50 10 20 C 0 6 20 -6 40 4"/>
+        <path d="M-10 110 C 40 90 60 70 60 40 C 60 20 45 8 30 12"/>
+        <!-- 卷草旋 -->
+        <path d="M 40 70 C 55 62 60 48 52 38 C 46 30 36 32 34 40 C 33 46 38 50 44 47"/>
+        <!-- 叶芽 -->
+        <path d="M 20 55 C 30 50 36 42 34 32"/>
+        <path d="M 60 85 C 72 80 80 70 80 58"/>
+        <!-- 左下方衔接 -->
+        <path d="M 70 110 C 95 98 110 80 108 60"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="200" height="800" fill="url(#navBg)"/>
+  <rect width="200" height="800" fill="url(#grass)"/>
+  <!-- 右侧描金细边（导航栏贴墙侧） -->
+  <line x1="198.5" y1="0" x2="198.5" y2="800" stroke="#D4A843" stroke-opacity="0.5" stroke-width="1.5"/>
+</svg>

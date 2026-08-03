@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 货架：木架 + 叠布 -->
+  <!-- 架腿 -->
+  <rect x="28" y="22" width="7" height="86" rx="2" fill="#8B6F47"/>
+  <rect x="93" y="22" width="7" height="86" rx="2" fill="#8B6F47"/>
+  <!-- 层板（三层） -->
+  <rect x="22" y="22" width="84" height="8" rx="2.5" fill="#6B5636"/>
+  <rect x="22" y="58" width="84" height="8" rx="2.5" fill="#6B5636"/>
+  <rect x="22" y="94" width="84" height="8" rx="2.5" fill="#6B5636"/>
+  <!-- 上层：卷布（两卷） -->
+  <ellipse cx="46" cy="46" rx="14" ry="9" fill="#D4A843"/>
+  <ellipse cx="78" cy="47" rx="12" ry="8" fill="#4A7C59"/>
+  <!-- 中层：叠布（三叠） -->
+  <path d="M 38 46 L 50 46 L 50 56 L 38 56 Z" fill="#F5F0E8" stroke="#8B5E3C" stroke-width="1.5"/>
+  <path d="M 40 39 L 60 39 L 60 49 L 40 49 Z" fill="#C9A86A"/>
+  <path d="M 64 40 L 80 40 L 80 50 L 64 50 Z" fill="#8FA3B5"/>
+  <!-- 下层：布卷侧放 -->
+  <ellipse cx="46" cy="86" rx="8" ry="12" fill="#C0392B" fill-opacity="0.85"/>
+  <path d="M 60 74 L 88 74 L 88 98 L 60 98 Z" fill="#FDF6F0" stroke="#8B5E3C" stroke-width="1.5"/>
+  <!-- 布纹短线 -->
+  <path d="M 66 80 L 82 80 M 66 86 L 82 86 M 66 92 L 82 92" stroke="#8B5E3C" stroke-opacity="0.45" stroke-width="1.2"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 精力：油灯（灯盏 + 火焰） -->
+  <!-- 火焰 -->
+  <path d="M 64 26 C 56 38 50 44 50 52 C 50 60 56 66 64 66 C 72 66 78 60 78 52 C 78 44 72 38 64 26 Z" fill="#D4A843"/>
+  <path d="M 64 40 C 60 46 57 49 57 53 C 57 58 60 61 64 61 C 68 61 71 58 71 53 C 71 49 68 46 64 40 Z" fill="#FFF6E0"/>
+  <!-- 灯盏（碗形） -->
+  <path d="M 38 74 C 38 68 90 68 90 74 L 84 86 C 82 90 46 90 44 86 Z" fill="#8B6F47"/>
+  <ellipse cx="64" cy="74" rx="26" ry="5" fill="none" stroke="#6B5636" stroke-width="3"/>
+  <!-- 灯座 -->
+  <path d="M 54 90 L 74 90 L 78 104 L 50 104 Z" fill="#8B6F47"/>
+  <rect x="44" y="104" width="40" height="7" rx="3" fill="#6B5636"/>
+  <!-- 提耳 -->
+  <path d="M 38 74 C 26 74 24 62 34 58" fill="none" stroke="#8B6F47" stroke-width="4" stroke-linecap="round"/>
+</svg>

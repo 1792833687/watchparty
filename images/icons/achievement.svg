@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 成就：青铜觚形奖杯（唐青铜器风格） -->
+  <g fill="none" stroke="#4A7C59" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 敞口 -->
+    <path d="M 38 22 L 90 22 L 82 38 L 46 38 Z"/>
+    <!-- 细颈 -->
+    <path d="M 48 38 L 80 38 L 78 50 L 50 50 Z"/>
+    <!-- 鼓腹 -->
+    <path d="M 46 50 C 34 58 34 72 44 80 C 52 86 76 86 84 80 C 94 72 94 58 82 50"/>
+    <!-- 圈足 -->
+    <path d="M 46 80 L 82 80 L 90 96 L 38 96 Z"/>
+    <path d="M 36 96 L 92 96 L 96 104 L 32 104 Z"/>
+    <!-- 双耳 -->
+    <path d="M 48 52 C 40 60 40 70 48 76" stroke-width="3"/>
+    <path d="M 80 52 C 88 60 88 70 80 76" stroke-width="3"/>
+  </g>
+  <!-- 青铜兽面纹饰（简化饕餮纹） -->
+  <g stroke="#4A7C59" stroke-opacity="0.65" stroke-width="2" fill="none">
+    <path d="M 56 60 C 60 56 68 56 72 60"/>
+    <circle cx="58" cy="64" r="2.2" fill="#4A7C59"/>
+    <circle cx="70" cy="64" r="2.2" fill="#4A7C59"/>
+    <path d="M 64 64 L 64 68"/>
+  </g>
+  <!-- 光泽 -->
+  <path d="M 54 30 L 74 30" stroke="#7FB08A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

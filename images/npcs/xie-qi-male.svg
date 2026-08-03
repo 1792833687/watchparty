@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF6F0"/>
+      <stop offset="1" stop-color="#EDE0CC"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#g)"/>
+  <rect x="28" y="28" width="744" height="1144" fill="none" stroke="#D4A843" stroke-opacity="0.55" stroke-width="2"/>
+  <!-- 简笔人物剪影 -->
+  <circle cx="400" cy="420" r="52" fill="#2C2C2C" fill-opacity="0.12"/>
+  <path d="M400 500 C 330 500 300 620 300 760 L 500 760 C 500 620 470 500 400 500 Z" fill="#4A7C59" fill-opacity="0.18" stroke="#4A7C59" stroke-width="3"/>
+  <text x="400" y="880" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="48" font-weight="700" fill="#2C2C2C" letter-spacing="10">谢七</text>
+  <text x="400" y="940" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="22" fill="#8B6F47" letter-spacing="6">男</text>
+  <text x="400" y="1000" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#8B5E3C" fill-opacity="0.7" letter-spacing="4">NPC 立绘 · 生成中</text>
+</svg>

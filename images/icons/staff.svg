@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 伙计：唐装人物剪影（墨色平涂） -->
+  <g fill="#2C2C2C">
+    <!-- 幞头（唐式头巾） -->
+    <path d="M 64 22 C 50 22 44 30 44 40 L 44 44 C 44 48 48 50 52 48 L 52 56 C 52 60 76 60 76 56 L 76 48 C 80 50 84 48 84 44 L 84 40 C 84 30 78 22 64 22 Z"/>
+    <!-- 脸 -->
+    <circle cx="64" cy="44" r="16" fill="#F5F0E8" stroke="#2C2C2C" stroke-width="3"/>
+    <!-- 袍身（交领唐装） -->
+    <path d="M 46 58 C 42 78 40 94 40 106 L 88 106 C 88 94 86 78 82 58 C 78 66 70 70 64 70 C 58 70 50 66 46 58 Z"/>
+    <!-- 交领 V 领 -->
+    <path d="M 64 60 L 52 74 L 64 70 L 76 74 Z" fill="#F5F0E8" stroke="#2C2C2C" stroke-width="2"/>
+    <!-- 腰带 -->
+    <rect x="42" y="82" width="44" height="5" fill="#D4A843"/>
+    <!-- 幞头结带 -->
+    <path d="M 80 42 C 88 40 94 42 96 46" fill="none" stroke="#2C2C2C" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
